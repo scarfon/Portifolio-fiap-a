@@ -92,3 +92,35 @@ img.avatar{
     align-items: flex-start;
     justify-content: space-evenly;
 }
+
+#section-projects{
+    background-color: #212121;
+}
+
+#section-projects ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+#section-projects li{
+    list-style: none;
+    position: relative;
+}
+.card-image img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .5s, bottom .5s;
+}
+#section-projects li:hover .card-info{
+    opacity: 1;
+    bottom: 20%;
+}
