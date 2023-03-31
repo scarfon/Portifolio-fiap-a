@@ -29,8 +29,8 @@ body{
     position: fixed;
     top: 2rem;
     right: 2rem;
-    z-index: 10;
     cursor: pointer;
+    z-index: 11;
 }
 
 #hamburguer .linha{
@@ -39,6 +39,39 @@ body{
     height: .5rem;
     background-color: #FFF;
     box-shadow: 0 .2rem .2rem #000;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    right: -20rem;
+    background-color: #FFF;
+    height: 100vh;
+    width: 20rem;
+    z-index: 10;
+    transition: right 1s;
+}
+
+#menu li{
+    list-style: none;
+}
+
+#menu a{
+    text-decoration: none;
+    color: var(--font-secondary);
+}
+
+#menu a:hover{
+    color: #a044ff;
+}
+
+.menu-show 
+{
+    right: 0;
 }
 
 header{
@@ -51,6 +84,7 @@ header{
     overflow: hidden;
     position: relative;
 }
+
 
 header::before{
     content: '';
