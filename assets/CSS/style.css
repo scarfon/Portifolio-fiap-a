@@ -20,6 +20,27 @@ body{
     color: var(--text-primary);
 }
 
+#hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#hamburguer .linha{
+
+    width: 100%;
+    height: .5rem;
+    background-color: #FFF;
+    box-shadow: 0 .2rem .2rem #000;
+}
+
 header{
     display: flex;
     flex-direction: column;
