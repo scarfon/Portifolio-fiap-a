@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +19,35 @@ html{
 body{
     font-family: var(--font-default);
     color: var(--text-primary);
+    font-size: 1.6rem;
+}
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.spin{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 16px solid #999;
+    border-top: 16px solid #6A3093;
+    animation: spin 3s ease-in-out infinite ;
+}
+.hide{
+    display: none;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
 }
 
 #hamburguer{
@@ -86,6 +116,7 @@ header{
 }
 
 
+
 header::before{
     content: '';
     width: 100%;
@@ -109,11 +140,16 @@ header::before{
     }
 }
 
-h1{
-    font-size: 5rem;
+h1, h2, h3, h4{
     font-weight: 900;
     font-family: var(--font-heading);
 }
+
+h1{font-size: clamp(2.5rem, 5vw, 5.5rem);}
+h2{font-size: 4rem;}
+h3{font-size: 3rem;}
+h4{font-size: 2rem;}
+p {font-size: 1.8rem;}
 
 span {
     font-size: 4rem;
@@ -136,9 +172,10 @@ img.avatar{
     border-radius: 50%;
 }
 .section-presentation{
+    padding: 5rem;
     display: flex;
     color: var(--font-secondary);
-    gap: 2rem;
+    gap: 3rem;
 
 }
 .section-presentation div{
@@ -149,6 +186,7 @@ img.avatar{
 }
 
 #section-projects{
+    padding: 4rem;
     background-color: #212121;
 }
 
@@ -161,6 +199,7 @@ img.avatar{
 #section-projects li{
     list-style: none;
     position: relative;
+    cursor: pointer;
 }
 .card-image img{
     width: 300px;
@@ -209,4 +248,14 @@ img.avatar{
 }
 #section-budget form output{
     grid-column: 2;
+}
+
+@media (max-width: 1000px) {
+    #section-projects ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .large-only{
+        display: none;
+    }
 }
